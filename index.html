@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jean Moulin Châteaulin | Portes Ouvertes</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F27MFR8WG0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-F27MFR8WG0');
+    </script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+    <link href="https://unpkg.com/tailwindcss@%5E1.0/dist/base.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Jean Moulin Châteaulin | Portes Ouvertes" />
+    <meta name="description" content="Portes ouvertes virtuelles du collège / lycée Jean Moulin de Châteaulin" />
+
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/pixi.js" defer></script>
+    <script src="js/pixi-legacy.min.js" defer></script>
+
+    <!-- Pour les personnes ne possédant pas webGL automatiquement -->
+    <script src="js/main/pixiMain.js" defer></script>
+    <script src="js/redirectionHandler.js" defer async></script>
+    <script src="js/main/cookiesManager.js" defer async></script>
+    <script src="js/main/buttonManager.js" defer async></script>
+    <script src="js/modalHandler.js" defer async></script>
+</head>
+<body>
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <img class="logo" src="img/logo.svg" height="120" width="119" />
+        <button id="retour"><i class="zmdi zmdi-chevron-left"></i> Retour</button>
+        <div class="cookiesBand">
+            <div class="cookiesBandText">
+                En poursuivant votre visite du site, vous acceptez l'utilisation de cookies indispensables au fonctionnement de celui-ci. Des cookies facultatifs déstinés à la mesure du trafic par Google Analytics peuvent également être proposés.
+            </div>
+            <div class="btns">
+                <button id="cookiesButton">En savoir plus</button>
+                <button id="cookiesClose">Fermer</button>
+            </div>
+        </div>
+        <div class="infoBoxContainer" style="z-index: 4;">
+            <div class="infoBox">
+                <div class="content">
+                    <span class="title">Gestion des Cookies</span>
+                    <p>Le site (<a href="https://portesouvertes.jeanmoulinchateaulin.com">portesouvertes.jeanmoulinchateaulin.com</a>) utilise des Cookies (données navigateurs) afin de pouvoir permettre l'amélioration constante du site Internet et d'en connaître son trafic pour en optimiser sa diffusion.</p>
+                    <span class="subtitle">Cookies obligatoires</span>
+                    <p>Le site utilise des Cookies locaux afin de permettre à celui-ci de fonctionner correctement. Ces Cookies ne stockent aucunes données permettant l'identification de l'utilisateur et ne sont jamais transmises sur Internet.</p>
+                    <span class="subtitle">Cookies facultatifs</span>
+                    <p>Le site utilise un module Google Analytics (gtag.js) pour la transmission de données de navigations telles que les pages visitées, les temps des sessions, l'utilisation des différentes fenêtres, le téléchargement de fichiers...</p>
+                    <label class="checkboxContainer">
+                        Activer les cookies de Google Analytics
+                        <input type="checkbox" id="GoogleAnalyticsCheckbox" checked>
+                        <span class="fakeCheckbox"></span>
+                    </label>
+                    <span class="subtitle">Contacter l'établissement</span>
+                    <p>LGT Jean Moulin<br />29150 Châteaulin<br />10 rue du lycée<br \><a href="tel://+33298861215">02.98.86.12.15</a> - <a href="https://jeanmoulinchateaulin.com/">jeanmoulinchateaulin.com</a></p>
+                    <p>Version du site: 1.12 (01/04/2021)</p>
+                    <p style="border-bottom: none; padding: 2vh; text-align: center;">2021 - <span id="dateActuelle"></span></p>
+                </div>
+                <button id="infoBoxClose">Fermer</button>
+            </div>
+        </div>
+        <div class="superposeHTML">
+            <div class="elements">
+                <div class="start">
+                    <span class="title subbed">JEAN MOULIN</span>
+                    <span class="subtitle">Visite virtuelle</span>
+                    <span class="description">
+                        Bienvenue sur le site de la visite virtuelle de la cité scolaire
+                        Jean Moulin!
+                    </span>
+                    <button>Commencer</button>
+                </div>
+                <div class="choice">
+                    <span class="subtitle subbed">Commencer la visite</span>
+                    <span class="description">Choisissez le parcours qui vous convient</span>
+                    <div>
+                        <button>Lycée</button>
+                        <button>Collège</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

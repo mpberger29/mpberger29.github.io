@@ -1,0 +1,237 @@
+.title {font-family: 'PT Serif', serif;font-size: 7vh;margin-bottom: 2pc;}
+.subtitle {font-family: 'PT Serif', serif;font-size: 3vh;}
+.description {margin: 2pc 0 3pc 0;}
+.subbed {border-bottom: 1px solid white;}
+
+/* Partie menu */
+#menu canvas {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+#menu .superposeHTML {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#retour {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    bottom: 0;
+    margin: 1%;
+    font-size: 25px;
+    animation: upward 1s ease;
+    border: none;
+    transform: none;
+}
+
+/* Partie first */
+#menu .superposeHTML .elements {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100vh;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 4pc 6pc;
+    max-height: fit-content;
+}
+
+#menu .superposeHTML .elements .start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: upward 1s ease;
+}
+
+#menu .superposeHTML .elements .start button {
+    padding: 20px 60px;
+    font-size: 2pc;
+    font-size: 1.5pc;
+}
+
+/* Partie choix lycée / collège */
+.choice {
+    margin: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    animation: upward 1s ease;
+    opacity: 1;
+}
+
+.choice div {
+    display: flex;
+    justify-content: center;
+}
+
+.choice > div > button {
+    width: 8rem;
+    padding: 10px 30px;
+    font-size: 1.2pc;
+    margin: .2rem 2rem;
+}
+
+/* Partie checkbox son */
+.sound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3pc;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.sound > span {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: .5pc 0;
+    opacity: .7;
+}
+
+.sound i {
+    font-size: 30px;
+    margin-right: 1pc;
+}
+
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding: 0 0 0 2.5pc;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    color: white;
+    margin: 1pc;
+}
+
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkboxContainer .fakeCheckbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5pc;
+    height: 1.5pc;
+    border: 2px solid white;
+}
+
+.fakeCheckbox:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .4s ease;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: white;
+}
+
+.checkboxContainer:hover input ~ .fakeCheckbox:after {
+    width: 60%;
+    height: 60%;
+    opacity: .8;
+}
+
+.checkboxContainer input:checked ~ .fakeCheckbox:after {
+    width: 70%;
+    height: 70%;
+    opacity: 1;
+}
+
+.cookiesBand {
+    z-index: 3;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    padding: 2vh;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: transform 3s ease;
+}
+
+.cookiesBand > button {
+    margin: 0 0.5% 0 0.5%;
+}
+
+.cookiesBandText {
+    width: 60%;
+    margin-right: 5%;
+    transition: transform 1s ease;
+}
+
+.infoBox > .content > .title {
+    font-family: "PT Serif", serif;
+    font-size: 39px;
+    margin: 4vh 0;
+    border-bottom: 1px solid white;
+}
+
+.infoBox > .content > .subtitle {
+    font-family: "PT Serif", serif;
+    font-size: 29px;
+    margin: 2%;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+  /* "Responsive" */
+@media screen and (max-width: 670px){
+    .logo {width: 10vh;}
+    
+    .cookiesBand {
+      flex-direction: column;
+      font-size: 12px;
+      align-items: flex-start;
+      height: 25vh;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .cookiesBandText {
+      width: 100%;
+      margin-bottom: 1pc;
+    }
+
+    .subtitle {font-size: 8vw;}
+
+    #retour {margin-bottom: 2pc;}
+  
+    #menu .superposeHTML .elements {
+        display: flex;
+        width: 95%;
+        height: 90%;
+        text-align: center;
+    }
+    #menu .superposeHTML .elements > div {
+        width: 100%;
+        flex-wrap: unset;
+        margin: 3pc 0;
+    }
+  
+    .modal_container > div {width: 95% !important;}
+    .modal_container iframe {width: 90vw !important;}
+    .modal_container button {
+      margin: .5pc 0 !important;
+    }
+}

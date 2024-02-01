@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+
+/* HTML */
+* {
+  outline: none !important;
+}
+
+a {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  opacity: 0;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+button.black {
+  /* Si le fond est blanc on a juste à ajouter la classe black au bouton */
+  border: 2px solid black;
+  color: black;
+}
+
+button:hover {
+  transform: scale(1.05, 1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Partie universelle */
+.logo {
+  z-index: 1;
+  position: fixed;
+  margin: 1%;
+}
+
+.fade-out,
+.fade-in.fade-out {
+  animation: fadeOut 1s ease;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+  opacity: 1;
+}
+
+/* Modal */
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  background: rgba(0, 0, 0, 0.95);
+}
+.modal_container > div {
+  width: 125vh;
+  height: -moz-fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 4pc;
+  animation: upward 1s ease;
+  color: white;
+  text-align: center;
+}
+.modal_container .title {
+  font-size: 5vh;
+}
+.modal_container .description {
+  margin-bottom: 3vh;
+  font-size: 2vh;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.modal_container iframe {
+  width: 60vh;
+  height: 35vh;
+  margin-bottom: 4vh;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+.modal_container button {
+  font-size: 2vh;
+  margin: 0 0.5pc;
+  width: 15pc;
+}
+
+.infoBoxContainer {
+  z-index: 3;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 35%;
+  height: 80vh;
+  animation: upward 1s ease;
+}
+
+.infoBox > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: scroll;
+  padding: 5%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.infoBox > .content > .title {
+  margin: 2%;
+}
+
+.infoBox > .content > p {
+  margin: 2%;
+}
+
+.infoBox > button {
+  margin-top: 1vh;
+  transform: none;
+}
+
+/* Animations */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes upward {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 670px){
+  .infoBox {width: 95%;}
+}

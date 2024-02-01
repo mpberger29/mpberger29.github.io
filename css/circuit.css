@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  color: white;
+  background-color: white;
+}
+
+.title {
+  font-family: "PT Serif", serif;
+  font-size: 39px;
+  margin: 4vh 0 1vh 0;
+  border-bottom: 1px solid white;
+}
+.subtitle {
+  font-family: "PT Serif", serif;
+  font-size: 29px;
+  margin-bottom: 1vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.viewed {
+  opacity: 0.5;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  transform: translateY(-10vh);
+}
+
+path {
+  fill-opacity: 0.1;
+  transition: fill-opacity 0.4s ease, stroke-width 0.4s ease;
+  cursor: pointer;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+path:hover {
+  fill-opacity: 0.6;
+}
+path.selected {
+  fill-opacity: 0.4;
+}
+path.hiddenPath {
+  cursor: default;
+  fill-opacity: 0;
+  stroke-width: 0;
+}
+i {margin-right: 0.8pc;}
+
+.buttonsInteraction {
+    padding: 1%;
+    width: 30%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    min-width: 20%;
+    z-index: 2;
+    position: fixed;
+}
+
+.buttonsInteraction > button {
+    transform: none;
+    border: none;
+    font-size: 25px;
+    animation: upward 1s ease;
+    margin: 1%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+}
+
+#retour {
+    display: none;
+}
+
+.side {
+    overflow-y: scroll;
+    position: fixed;
+    right: -25%;
+    z-index: 1;
+    height: 100vh;
+    width: 20%;
+    padding: 0 2%;
+    background-color: rgba(0, 0, 0, 0.540);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 1.5vh;
+    transition: transform 1s ease;
+}
+
+.side > p {
+  font-family: "PT Serif", serif;
+  font-size: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 3vh;
+}
+
+.subjects {
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.subjects > button {
+  margin-bottom: 2%;
+  font-size: 15px;
+  overflow: hidden;
+  flex-grow: 1;
+  transition: opacity 0.4s ease, background-color 0.2s ease;
+}
+
+.subjects > button:hover {
+  transform: none;
+}
+
+#details {
+  background-color: rgba(0, 0, 0, 0.925);
+  position: absolute;
+  z-index: 4;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: auto;
+}
+
+#closeSidebarRegion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+}
+
+/* "Responsive" */
+@media screen and (orientation: landscape) and (max-width: 800px){
+  .logo {width: 10vw;}
+  button {font-size: 5vh !important;}
+  button i {display: none !important;}
+
+  .side {
+    width: 35%;
+    right: -39vw;
+  }
+  .side button {
+    font-size: 4vh !important;
+  }
+
+  .subtitle {
+    margin-top: .5pc;
+    font-size: 3.5vw;
+  }
+
+  .parent {overflow: auto;}
+
+  .choose {margin-bottom: .5pc !important;}
+
+  .receptacle i {margin: 0 1pc;}
+  .receptacle {
+    justify-content: center;
+  }
+
+  .buttonsInteraction button i {display: none !important;}
+  .buttonsInteraction button {font-size: 3vw !important;}
+
+}
+
+@media screen and (orientation:portrait) {
+  body *{
+    display:none;
+  }
+  body::before{
+    width:100vw;
+    height:100vh;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+    content:"Pour accéder au site veuillez mettre votre téléphone en mode paysage.";
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    font-size:1.5em;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+    url(/img/map.jpg);
+  }
+}

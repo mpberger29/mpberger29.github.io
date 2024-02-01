@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F27MFR8WG0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-F27MFR8WG0');
+    </script>
+
+    <!-- CSS / JS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/circuit.css">
+    <link rel="stylesheet" href="css/zmdi/css/material-design-iconic-font.min.css">
+    <script src="js/circuit/circuit.js" defer type="module"></script>
+    <script src="js/redirectionHandler.js" defer async></script>
+
+    <!-- Scripts du viou -->
+    <script src="js/circuit/viou/onglets.js" defer></script>
+    <script src="js/circuit/viou/diaporama.js" defer></script>
+    <script src="js/circuit/viou/diapoVideo.js" defer></script>
+    <link rel="stylesheet" href="js/circuit/viou/style/style.css"></link>
+</head>
+
+<body>
+    <div id="details"></div>
+    <main id="circuit">
+        <div id="closeSidebarRegion"></div>
+        <a id="retourmenu"><img class="logo" src="img/logo.svg" /></a>
+        <div class="buttonsInteraction">
+            <button id="info"><i class="zmdi zmdi-info-outline"></i> Informations</button>
+            <button id="retour"><i class="zmdi zmdi-chevron-left"></i> Retour</button>
+        </div>
+        <div class="infoBoxContainer">
+            <div class="infoBox">
+                <div class="content">
+                    <span class="title">Fonctionnement des Portes Ouvertes Virtuelles</span>
+                    <p>Vous êtes sur une vue aérienne de la cité scolaire Jean Moulin.</p>
+                    <p>En cliquant sur chacun des bâtiments, vous trouverez les pôles et les matières qui y sont enseignées.</p>
+                    <p>Cela vous permettra de vous familiariser avec la géographie des lieux et de découvrir toutes les facettes de notre établissement.</p>
+                    <p>Bonne visite !</p>
+                    <span class="title">À propos</span>
+                    <p>Cette visite virtuelle pour la rentrée 2021 vous est présenté par les élèves de l'établissement :</p>
+                    <ul>
+                        <li>Martin BRONNIMANN</li>
+                        <li>Valentin KERVENNIC</li>
+                        <li>Romain SEZNEC</li>
+                        <li>Zacchary JESUS</li>
+                    </ul>
+                    <p>Avec l'assistance précieuse des professeurs :</p>
+                    <ul>
+                        <li>M. BERGER</li>
+                        <li>S. BANCOURT</li>
+                    </ul>
+                    <p>En remerciant nos chefs d'établissement de l'opportunité :</p>
+                    <ul>
+                        <li>C. HAILLARD (proviseur)</li>
+                        <li>C. HERJEAN (proviseur adjointe)</li>
+                        <li>S. GUIADER (proviseur adjointe collège)</li>
+                    </ul>
+                    <span class="subtitle">Mentions légales</span>
+                    <p>LGT Jean Moulin:<br />29150 Châteaulin - 10 rue du lycée<br \><a href="tel://+33298861215">02.98.86.12.15</a> - <a href="https://jeanmoulinchateaulin.com/">jeanmoulinchateaulin.com</a></p>
+                    <p>@pixijs/pixi.js (<a href="https://github.com/pixijs/pixi.js">https://github.com/pixijs/pixi.js</a>): The MIT License</p>
+                    <p>Version du site: 1.12 (01/04/2021)</p>
+                    <p style="border-bottom: none; padding: 2vh; text-align: center;">2021 - <span id="dateActuelle"></span></p>
+                </div>
+                <button id="close">Fermer</button>
+            </div>
+        </div>
+        <div class="side"></div>
+        <svg id="svgContainer" viewBox="0 0 1920 1208" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="1920" height="1208" fill="black" />
+            <rect width="1920" height="1208" fill="url(#pattern0)" fill-opacity="0.4" />
+            <g clip-path="url(#clip0)">
+                <path
+                    id="B"
+                    d="M714.203 658.638L717.203 651.638L758.703 639.138L773.203 688.138L783.703 685.638L843.5 876L832.5 878.5L843.5 920.5L773.5 938L728.203 764.638L714.203 658.638Z"
+                    fill="#C4C4C4" fill-opacity="0.4" />
+                <path
+                    id="C"
+                    d="M833.791 687.728L896.5 667.5L961 649.5L996.5 754.5L1030.26 859.807L1026.2 869.86L898 911L831 699L833.791 687.728Z"
+                    fill="#C4C4C4" fill-opacity="0.4" />
+                <path 
+                    id="G"
+                    d="M475 509L479 486.5L540 482L562.5 805L559.5 812.5L498.5 819L488 661.5L475 509Z" fill="#C4C4C4"
+                    fill-opacity="0.4" />
+                <path
+                    id="E"
+                    d="M781.5 547L786.5 529.5L840 513.5L833.5 490.5L855.5 484L880 471.5L889.5 497.5L1066.5 441L1061.5 423L1066.5 413.5L1128.5 398.5L1135 419L1188.92 402.83L1206 458L1201 471.5L802.5 601L781.5 547Z"
+                    fill="#C4C4C4" fill-opacity="0.4" />
+                <path
+                    id="Self"
+                    d="M1230 705.5L1281 724H1297L1339 854L1286.5 990L1268.5 984.5L1207 1009L1175.5 994.5L1160.5 1026L1108.5 1005L1230 705.5Z"
+                    fill="#C4C4C4" fill-opacity="0.4" />
+                <path 
+                    id="F"
+                    d="M612 126L618.5 106.5L673.5 85.5L781.5 418.5L776 437.5L722 456L661.5 293L612 126Z"
+                    fill="#C4C4C4" fill-opacity="0.4" />
+                <path 
+                    id="EPS"
+                    d="M558.5 910L1005 1083L959.5 1210H508L524.5 1057L537.5 977L558.5 910Z" fill="#C4C4C4"
+                    fill-opacity="0.4" />
+            </g>
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.000520833 0.000827815)" />
+                </pattern>
+                <clipPath id="clip0">
+                    <rect width="1920" height="1208" fill="white" />
+                </clipPath>
+                <image id="image0" width="1920" height="1208"
+                    xlink:href="/img/map.jpg" />
+            </defs>
+        </svg>
+    </main>
+</body>
+</html>
